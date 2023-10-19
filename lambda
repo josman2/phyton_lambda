@@ -1,0 +1,70 @@
+funciones lambda: son llamadas funciones anonimas, son funciones cortas creadas por el usuario.
+#no son recomendables para usar en estructuras de control
+"""
+sintaxis:
+nom_funcion lambda  argumentos expresion
+
+def nombre_funcion(parametros):
+    bloque codigo
+    return(opcional)
+"""
+#calcular el cubo de un numero:
+#funcion tradicional:
+"""
+def cubo(numero):
+    return numero ** 3
+#print(cubo(3))
+
+num = int(input("ingrese numero: "))
+resultado = cubo(num)
+print(resultado)
+
+
+#LANBDA:
+pares  = lambda  valor: valor ** 3
+print(cubo())
+
+#imprimir una lista solo numeros pares.
+#funcion tradicional
+"""
+"""
+lista_num = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+pares = []
+for x in range(len(list_num)):
+    if list_num[x]%2 == 0:
+        pares.append(lista_num[x])
+print(pares)
+
+#funcion tradicional:
+def pares(lista):
+    par = []
+    for n in lista:
+        if n%2==0:
+            par.append(n)
+    print(par)    
+pares([1,2,3,4,5,6])
+
+#funcion lambda: FILTER: PERMITE FILTRAR DATOS DE UN OBJETO ITERADOR (TUPLAS, LISTAS)
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+numeros_pares = list(filter(lambda x: x % 2 == 0, numeros))
+
+print("Números pares:", numeros_pares)
+"""
+#crear una lista numerica y en otra vacia almacenar el resultado de cada valor elevado al cubo. realizar el ejercicio usando las tres
+#posibles soluciones.
+#al realizar la funcion lambda usar la funcion MAP que transforma una lista en tupla
+
+lista_1 = [1,2,3,4,5,6,7,8,9] 
+lista_vacia = list(map(lambda n: n**3, lista_1))
+print(lista_vacia)
+
+#tradicional 
+lista_valor =[1,2,3,4,5,6,7,8,9]
+def calcular_cubo(valores):
+    lista_cubo =[]
+    for x in valores:
+        lista_cubo.append(p ** 3)
+    return lista_cubos
+print(calcular_cubo(lista_valor))
+
